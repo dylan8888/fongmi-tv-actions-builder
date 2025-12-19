@@ -141,12 +141,12 @@ jobs:
             echo "build_reason=no_changes" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Set up JDK 24
+      - name: Set up JDK 217
         if: steps.check_build.outputs.build_needed == 'true'
         uses: actions/setup-java@v5
         with:
           distribution: "temurin"
-          java-version: "24"
+          java-version: "17"
           cache: "gradle"
       - name: Setup Python
         uses: actions/setup-python@v5
