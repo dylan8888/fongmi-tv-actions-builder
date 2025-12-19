@@ -141,7 +141,7 @@ jobs:
             echo "build_reason=no_changes" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Set up JDK 217
+      - name: Set up JDK 17
         if: steps.check_build.outputs.build_needed == 'true'
         uses: actions/setup-java@v5
         with:
